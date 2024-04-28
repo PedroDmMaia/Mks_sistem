@@ -106,7 +106,7 @@ function App() {
               )}
             </OrdetItems>
             <TotalPrice>
-              <p>Total</p>
+              <p>Total:</p>
               <span>R$ {calculateTotalPrice()}</span>
             </TotalPrice>
             <FinishOrder disabled={items.length === 0}>

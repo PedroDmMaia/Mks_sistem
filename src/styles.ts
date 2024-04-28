@@ -76,7 +76,7 @@ export const OrderHeader = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   span {
     ${mixins.fonts.titleXl};
@@ -204,9 +204,14 @@ export const OrdetItems = styled.ul`
 `
 
 export const QuantityInput = styled.div`
+  position: relative;
+  top: -10px;
+
   @media screen and (max-width: 768px) {
     width: 40%;
     margin-bottom: 1rem;
+
+    top: 0;
   }
 
   > div {
@@ -247,7 +252,13 @@ export const TotalPrice = styled.div`
   bottom: 90px;
 
   p {
-    margin-right: 250px;
+    margin-right: 15.6rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    p {
+      margin-right: 2rem;
+    }
   }
 `
 

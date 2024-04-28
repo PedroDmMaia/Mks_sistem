@@ -26,7 +26,10 @@ export function Header({ cartIsOpenProp }: Props) {
         <span>Sistemas</span>
       </div>
 
-      <Carrinho onClick={() => handleCartIsOpen()}>
+      <Carrinho
+        data-testid="carrinho-button"
+        onClick={() => handleCartIsOpen()}
+      >
         <img src={carrinho} alt="" />
         <span>{items.length}</span>
       </Carrinho>
