@@ -28,6 +28,12 @@ export const Contianer = styled.header`
       top: 0.3rem;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 2% 5%;
+
+    margin-bottom: 0;
+  }
 `
 
 export const Carrinho = styled.button`

@@ -9,15 +9,19 @@ import { rootReducer } from './store'
 import {
   decrementItem,
   incrementItem,
+  removeItem,
   setCarrinho,
 } from './store/reducers/carrinho'
 import {
   Button,
   Container,
+  FinishOrder,
   Footer,
   OrderHeader,
   OrderResume,
   OrdetItems,
+  QuantityInput,
+  TotalPrice,
 } from './styles'
 import { GlobalStyle } from './styles/global'
 
@@ -87,25 +91,28 @@ function App() {
                       <img src={photo} alt="" />
                       <span id="name">{name}</span>
                     </div>
-                    <div>
+                    <QuantityInput>
                       <span>Qtd:</span>
                       <div>
                         <Minus onClick={() => dispatch(decrementItem(id))} />
                         <span>{quantity}</span>
                         <Plus onClick={() => dispatch(incrementItem(id))} />
                       </div>
-                    </div>
+                    </QuantityInput>
                     <span>R$ {price}</span>
+                    <X onClick={() => dispatch(removeItem(id))} />
                   </li>
                 ),
               )}
             </OrdetItems>
-            <div>
+            <TotalPrice>
               <p>Total</p>
-              <span>{calculateTotalPrice()}</span>
-            </div>
+              <span>R$ {calculateTotalPrice()}</span>
+            </TotalPrice>
+            <FinishOrder disabled={items.length === 0}>
+              Finalizar compra
+            </FinishOrder>
           </OrderResume>
-          <button>Finalizar compra</button>
         </>
       )}
     </>

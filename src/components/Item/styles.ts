@@ -16,10 +16,11 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 0.6rem;
 
-    height: 21rem;
+    min-height: 21rem;
 
     img {
       width: 100%;
+      height: auto;
     }
 
     > div {

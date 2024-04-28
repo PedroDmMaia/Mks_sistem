@@ -11,6 +11,14 @@ type Props = {
 export function Header({ cartIsOpenProp }: Props) {
   const { items } = useSelector((state: rootReducer) => state.carrinho)
 
+  function handleCartIsOpen() {
+    if (items.length > 0) {
+      cartIsOpenProp(true)
+    } else {
+      alert('carrinho vazio')
+    }
+  }
+
   return (
     <Contianer>
       <div>
@@ -18,7 +26,7 @@ export function Header({ cartIsOpenProp }: Props) {
         <span>Sistemas</span>
       </div>
 
-      <Carrinho onClick={() => cartIsOpenProp(true)}>
+      <Carrinho onClick={() => handleCartIsOpen()}>
         <img src={carrinho} alt="" />
         <span>{items.length}</span>
       </Carrinho>

@@ -65,7 +65,7 @@ export const mixins = {
     qunatityFont: css`
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
-      font-size: 0.3125rem;
+      font-size: 0.6rem;
       line-height: 130%;
     `,
     footer: css`
